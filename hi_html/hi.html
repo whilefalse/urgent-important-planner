@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Hello</title>
+    <style type="text/css">
+      *{padding:0; margin:0}
+      #container {width:800px; text-align:center; margin:auto; }
+      #task-table {width:800px; height:500px; border: 1px solid #AFAFAF; margin-top:25px;}
+      #task-table td {border: 1px solid #AFAFAF; margin:0; padding:0;}
+      #new-task-form input {width:100%;}
+      #new-task-form {margin-top:100px; margin-bottom:20px;}
+      li {border: 1px solid #ffdddd; min-height:30px; margin:auto; text-align:left; list-style:none; background-color: #efefef;}
+      #task-table ul {min-height:250px; width:400px;}
+      #new-task-list {width: 400px; min-height:50px;}
+      #new-task {background-color: #aaaaaa}
+    </style>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery-ui.js"></script>
+    <script>
+      jQuery(document).ready(function($) {
+        $('#new-task-input').keyup(function(e){
+          $('#new-task').html($(this).val());
+        });
+        $("#task-table ul.sortable, #new-task-list").sortable({
+          connectWith: '.sortable',
+          remove: function(e, ui){
+            if (ui.item.attr('id') == 'new-task'){;
+               ui.item.attr('id', 'item-'+$('ul#sortable li').length);
+               $('#new-task-list').html('<li id="new-task"></li>');
+            }
+          }
+        }).disableSelection();
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="container">
+      <form id="new-task-form">
+        <input id="new-task-input" type="text" value="New task..."/>
+      </form>
+      <ul id="new-task-list">
+        <li id="new-task">
+
+        </li>
+      </ul>
+      <table id="task-table">
+        <tr id="important">
+          <td id="important-urgent">
+            <ul class="sortable">
+              <li>1</li>
+            </ul>
+          </td>
+          <td id="important-not-urgent">
+            <ul class="sortable">
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </td>
+        </tr>
+        <tr id="not-important">
+          <td id="not-important-urgent">
+            <ul class="sortable">
+
+            </ul>
+          </td>
+          <td id="not-important-not-urgent">
+            <ul class="sortable">
+
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
