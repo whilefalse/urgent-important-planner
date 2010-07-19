@@ -1,0 +1,12 @@
+*{padding:0; margin:0}
+#container {width:800px; text-align:center; margin:auto; }
+#task-table {width:800px; height:500px; border: 1px solid #AFAFAF; margin-top:25px;}
+#task-table td {border: 1px solid #AFAFAF; margin:0; padding:0;}
+#new-task-form input {width:100%;}
+#new-task-form {margin-top:100px; margin-bottom:20px;}
+.delete-task-form * {float:right;}
+.delete-task-form input {font-size: 20px;position:relative; top:-19px;border: none; background-color:transparent; color:#fafafa;}
+li {border: 1px solid #ffdddd; min-height:30px; margin:auto; text-align:left; list-style:none; background-color: #efefef;}
+#task-table ul {min-height:250px; width:400px;}
+#new-task-list {width: 400px; min-height:50px;}
+.new-task {background-color: #aaaaaa}
