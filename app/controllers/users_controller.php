@@ -2,7 +2,7 @@
 class UsersController extends AppController {
 
 	var $name = 'Users';
-	var $components = array('Openid.Openid', 'Auth');
+	var $components = array('Openid.Openid' => array('use_database' => true), 'Auth');
 
     function login(){
       $returnTo = 'http://'.$_SERVER['SERVER_NAME'].'/users/login/';
