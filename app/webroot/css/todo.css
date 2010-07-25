@@ -4,7 +4,7 @@
 #task-table td ul {height: 100%; width:99%;}
 #task-table th {vertical-align:middle;}
 
-td#important-urgent {background-color: #dc3333;}
+td#important-urgent {background-color: #e57272;}
 td#important-not-urgent {background-color: #dae8b9;}
 td#not-important-urgent {background-color: #f8e3e3;}
 td#not-important-not-urgent {background-color: #d5d5d3;}

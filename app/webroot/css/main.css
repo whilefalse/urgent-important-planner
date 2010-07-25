@@ -1,0 +1,16 @@
+body {font-family: Helvetica, Arial, sans-serif; margin: 20px 50px 0 50px; background-color: #ffffcc; color: #002222;}
+div#header{ float:right; display:block;clear:both;}
+div#content{ clear:both; }
+h1{ text-align: center; font-size:3em; padding-top: 50px; color: #006600; padding-bottom: 30px;}
+h2{ font-size: 1.3em; padding-top:25px;}
+div#intro-text{ text-align: center; margin-top:20px;}
+blockquote{font-style: italic; padding:10px;}
+cite{font-style:none; font-size:0.9em; text-decoration:underline }
+p { margin-bottom: 20px;}
+span#with-openid{ padding-left: 10px; font-size:0.8em;}
+div.login{ background: url(/img/openid-icon.gif) no-repeat left top; padding-left: 20px;}
+div#login-content{ text-align: center;}
+div#login-content input {font-size:1.2em; margin-bottom: 10px; padding:2px;}
+p.error { font-size: 1.1em; color: 990000; text-align: center;}
+span.pipe {margin: 0 5px 0 10px;}
+span.username{ font-weight: bold;}
