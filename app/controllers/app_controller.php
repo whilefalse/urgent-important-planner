@@ -6,6 +6,7 @@ class AppController extends Controller{
   function beforeFilter(){
     $this->set('user', $this->Auth->user());
     $this->Auth->logoutRedirect = array('controller' => 'pages', 'action' => 'home');
+    $this->set('title_for_layout',"Impurger");
   }
 
   function userOwnsTodo($todo_id){

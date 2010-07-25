@@ -7,30 +7,28 @@
      echo $form->hidden('todo_id', array('value' => $todo['Todo']['id']));
      echo $form->end('Add');
   ?>
-  <ul id="new-task-list">
-    <?php echo $this->element('task_list', array('new' => true));?>
-  </ul>
+  <?php echo $this->element('task_list', array('new' => true));?>
   <table id="task-table">
-    <tr>
+    <tr class="title-row">
       <th></th>
-      <th>Urgent</th>
-      <th>Not Urgent</th>
+      <th id="urgent-title">Urgent</th>
+      <th id="not-urgent-title">Not Urgent</th>
     </tr>
     <tr id="important">
-      <th>Important</th>
-      <td>
+      <th id="important-title">Important</th>
+      <td id="important-urgent">
         <?php echo $this->element('task_list', array('important' => 1, 'urgent' => 1));?>
       </td>
-      <td>
+      <td id="important-not-urgent">
         <?php echo $this->element('task_list', array('important' => 1, 'urgent' => 0));?>
       </td>
     </tr>
     <tr id="not-important">
-      <th>Not Important</th>
-      <td>
+      <th id="not-important-title">Not Important</th>
+      <td id="not-important-urgent">
         <?php echo $this->element('task_list', array('important' => 0, 'urgent' => 1));?>
       </td>
-      <td>
+      <td id="not-important-not-urgent">
         <?php echo $this->element('task_list', array('important' => 0, 'urgent' => 0));?>
       </td>
     </tr>

@@ -58,6 +58,7 @@ class TasksController extends AppController {
 
     function _renderTask($task_id){
       $this->set('task', $this->Task->findById($task_id));
+      $this->set('new', true);
       $this->render('/elements/task', null);
       $output = $this->output;
       $this->output = '';

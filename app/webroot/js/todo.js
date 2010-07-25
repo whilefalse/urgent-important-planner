@@ -14,18 +14,25 @@ jQuery(document).ready(function($) {
                         endLoading();
                     }
                 });
+            $('.delete-task-form div.submit input').hover(function(){
+                    $(this).attr('value', '☑');
+                },
+                function(){
+                    $(this).attr('value', '☐');
+                });
         }
         attachDeleteEvents();
 
         function startLoading(){
-            $('#loading-gif').show();
+            //            $('#loading-gif').show();
         }
         function endLoading(){
-            $('#loading-gif').hide();
+            //            $('#loading-gif').hide();
         }
         $("#task-table ul.sortable, #new-task-list").sortable({
                 connectWith: '.sortable',
                     receive: function(event, ui){
+                    $(ui.item).removeClass('new-task').addClass('existing-task');
                     var task_id = parseInt($(ui.item).attr('id').split('-')[1]);
                     var id = $(event.target).attr('id');
                     var split_id = id.split('-');
@@ -47,7 +54,11 @@ jQuery(document).ready(function($) {
                                endLoading();
                                //TODO: do something here
                            });
-                }
+                },
+                    revert: 50,
+                    scroll: false,
+                    containment: 'div#container'
+
             }).disableSelection();
         $('#new-task-form').ajaxForm({
                 beforeSubmit: startLoading,

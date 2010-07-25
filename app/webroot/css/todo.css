@@ -1,12 +1,26 @@
-*{padding:0; margin:0}
-#container {width:800px; text-align:center; margin:auto; }
-#task-table {width:800px; height:500px; border: 1px solid #AFAFAF; margin-top:25px;}
-#task-table td {border: 1px solid #AFAFAF; margin:0; padding:0;}
-#new-task-form input {width:100%;}
-#new-task-form {margin-top:100px; margin-bottom:20px;}
-.delete-task-form * {float:right;}
-.delete-task-form input {font-size: 20px;position:relative; top:-19px;border: none; background-color:transparent; color:#fafafa;}
-li {border: 1px solid #ffdddd; min-height:30px; margin:auto; text-align:left; list-style:none; background-color: #efefef;}
-#task-table ul {min-height:250px; width:400px;}
-#new-task-list {width: 400px; min-height:50px;}
-.new-task {background-color: #aaaaaa}
+#container {width:100%; text-align:center; margin:auto; padding-top:10px;}
+#task-table {width:100%; height:80%;  margin:auto;}
+#task-table td {border: 1px solid #AFAFAF; min-height:250px; width:47%; height:40%;}
+#task-table td ul {height: 100%; width:99%;}
+#task-table th {vertical-align:middle;}
+
+td#important-urgent {background-color: #dc3333;}
+td#important-not-urgent {background-color: #dae8b9;}
+td#not-important-urgent {background-color: #f8e3e3;}
+td#not-important-not-urgent {background-color: #d5d5d3;}
+
+#task-table tr.title-row th{ height:1em; vertical-align: middle;}
+
+#new-task-form input {width:50%;}
+#new-task-form label {display:block; margin-bottom:10px; padding-top:10px; font-weight: bold;}
+
+.delete-task-form div.submit input {font-size: 20px; border: none; background-color:transparent; color: black; cursor: pointer; padding-bottom:2px;}
+
+li {border: dashed black; border-width: 0 0 1px 0; vertical-align: middle; list-style:none;}
+li * {float:right;}
+
+#new-task-form, #new-task-list {background-color: #ffff99;}
+
+#new-task-list {min-height: 2.5em; overflow: hidden;}
+.new-task {float:left; padding: 5px 0 0 3px ; cursor: move; min-width:150px; text-align:left; margin:0 5px;}
+.existing-task {width:100%; float:left; padding: 5px 0 0 3px ; cursor: move; }
