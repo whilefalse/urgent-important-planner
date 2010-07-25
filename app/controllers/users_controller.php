@@ -28,7 +28,6 @@ class UsersController extends AppController {
           $this->_setMessage('OpenID verification failed: '.$response->message);
         }
         elseif ($response->status == Auth_OpenID_SUCCESS){
-          echo 'successfully authenticated as '.$response->identity_url.'!';
           $this->_handleLogin($response->identity_url);
         }
       }
